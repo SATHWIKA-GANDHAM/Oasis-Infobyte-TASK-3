@@ -1,0 +1,67 @@
+import java.util.Scanner;
+
+public class ATM {
+	
+	public static void main(String[] args) {
+		
+		// Declare variables
+		int userId;
+		int userPin;
+		int transactionHistory;
+		int withdraw;
+		int deposit;
+		int transfer;
+		int quit;
+		
+		// Create a Scanner object
+		Scanner input = new Scanner(System.in);
+		
+		// Prompt the user to enter user id and user pin
+		System.out.println("Please enter your user id: ");
+		userId = input.nextInt();
+		
+		System.out.println("Please enter your user pin: ");
+		userPin = input.nextInt();
+		
+		// Check if user id and user pin are valid
+		if (userId == 12345 && userPin == 1234) {
+			
+			// Prompt the user to select an option
+			System.out.println("Please select an option: ");
+			System.out.println("1. Transactions History");
+			System.out.println("2. Withdraw");
+			System.out.println("3. Deposit");
+			System.out.println("4. Transfer");
+			System.out.println("5. Quit");
+			
+			int option = input.nextInt();
+			
+			// Perform the selected option
+			switch (option) {
+				case 1:
+					System.out.println("You have selected Transactions History");
+					break;
+				case 2:
+					System.out.println("You have selected Withdraw");
+					break;
+				case 3:
+					System.out.println("You have selected Deposit");
+					break;
+				case 4:
+					System.out.println("You have selected Transfer");
+					break;
+				case 5:
+					System.out.println("You have selected Quit");
+					break;
+				default:
+					System.out.println("Invalid option");
+					break;
+			}
+			
+		} else {
+			System.out.println("Invalid user id or user pin");
+		}
+		
+	}
+	
+}
